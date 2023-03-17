@@ -1,3 +1,7 @@
 # LOCO-EFA-based leaf morphometry, automatic PCA graph creator and rudimentary model to predict species
 Using lobe contribution elliptic fourier analysis to analyse leaf morphology, and (sort of) categorise by species
 LOCO-EFA (Sanchez-Corrales et al. 2018) tries to explain an object's shape by using its outline. It addresses some of the downsides of regular EFA, you can read more about it in the original paper here https://pubmed.ncbi.nlm.nih.gov/29444894/
+
+Image files MUST be thresholded PNGs in the following naming scheme "Genus species 00.png". If you need more than 2 digits to number your files, the scripts might still work but I haven't tested it.
+I recommend using ImageMagick to batch-threshold your files. -auto-threshold OTSU was used in this case.
+Since the petiole skews the results, I made a quick and dirty script that should hopefully automatically go in and remove the petiole, and output the results in a separate folder. Unfortunately, it will remove details from leaves with serrations or other sharp details due to how it works. Also, if the petiole is particularly thick, the value in the script will need to be adjusted (higher value = more detail loss, finding a balance is ideal). The thickest part of the petiole (usually the base) might also be retained, however as long as it's not attached to the rest of the leaf LOCO-EFA will ignore it, so these artifacts do not affect the results (as far as I can tell).
