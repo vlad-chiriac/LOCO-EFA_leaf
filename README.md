@@ -7,6 +7,6 @@ I recommend using ImageMagick to batch-threshold your files. "mogrify -auto-thre
 
 Since the petiole skews the results, I made a quick script that automatically reads in each image and removes the petiole, then outputs the modified images in a separate folder. Unfortunately, it will remove details from leaves with serrations or other sharp details due to how it works. Also, the value in the petiolereomver script will need to be adjusted (higher value = more detail loss, finding a balance is ideal) based on the resolution of your images. The thickest part of the petiole (usually the base) might still be retained, however as long as it's not attached to the rest of the leaf LOCO-EFA will ignore it, so these artifacts do not affect the results (as far as I can tell). Due to these limitations, I would only use the petioleremover if you're working with a lot of images, otherwise manual removal is best.
 
-For testing purposes I've included a dataset that is pre=thresholded and de-petioled (both done manually).
+For testing purposes I've included a dataset that is pre-thresholded and de-petioled (both done manually).
 
 To use this, download the repo and load the files into R studio. Make sure you have the latest R version installed. Install the required packages and change the path in the scripts to reflect where your dataset is. Hopefully, if you run it after that it should all just work.
