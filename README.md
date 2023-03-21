@@ -10,3 +10,5 @@ Since the petiole skews the results, I made a quick script that automatically re
 For testing purposes I've included a dataset that is pre-thresholded and de-petioled (both done manually).
 
 To use this, download the repo and load the files into R studio. Make sure you have the latest R version installed. Install the required packages and change the path in the scripts to reflect where your dataset is. Hopefully, if you run it after that it should all just work.
+
+![image](./images/Acer with petiole PCA graph.png)
