@@ -11,4 +11,17 @@ For testing purposes I've included a dataset that is pre-thresholded and de-peti
 
 To use this, download the repo and load the files into R studio. Make sure you have the latest R version installed. Install the required packages and change the path in the scripts to reflect where your dataset is. Hopefully, if you run it after that it should all just work.
 
+# Examples (not using provided dataset)
+Difference between original and petiole-less images (note the bottom of the petiole persisting in some of them)
+![My Image](images/Acerwpetiolegrid.png)
+![My Image](images/Acerwithoutpetiolegrid.png)
+
+Petioleremover script gives good results for leaves that don't have serrations
 ![My Image](images/petiolecomparisongraph.png)
+
+PCA graphs comparing petiole and petiole-less results
+![My Image](images/AcerwithpetiolePCAgraph.png)
+![My Image](images/AcerwithoutpetiolePCAgraph.png)
+
+Example of 3D PCA graph
+![My Image](images/acer3dgraphs.png)
