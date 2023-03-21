@@ -1,6 +1,6 @@
 # LOCO-EFA-based leaf morphometry, automatic PCA graph creator and rudimentary model to predict species
 Using lobe contribution elliptic fourier analysis to analyse leaf morphology, and (sort of) categorise by species
-LOCO-EFA (Sanchez-Corrales et al. 2018) tries to explain an object's shape by using its outline. It addresses some of the downsides of regular EFA, you can read more about it in the original paper here https://pubmed.ncbi.nlm.nih.gov/29444894/
+LOCO-EFA (Sanchez-Corrales et al. 2018) tries to explain an object's shape by using its outline. It addresses some of the downsides of regular EFA, you can read more about it in the original paper here https://pubmed.ncbi.nlm.nih.gov/29444894/; the original LOCO-EFA R library is here https://github.com/stanmaree/cellshape.
 
 Image files MUST be thresholded PNGs in the following naming scheme "Genus species 00.png". If you need more than 2 digits to number your files, the scripts might still work but I haven't tested it. It should be pretty straightforward to modify it however.
 I recommend using ImageMagick to batch-threshold your files. "mogrify -auto-threshold OTSU *.png" is the command I used; there are methods other than OTSU but this gave me the best results.
